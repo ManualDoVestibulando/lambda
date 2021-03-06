@@ -1,0 +1,15 @@
+{
+    "nusp": "11806751",
+    "instituto": "poli",
+    "curso": "comp",
+    "modalidade": "AC",
+    "primeiraFase": 0.57,
+    "segundaFase": {
+      "dia1": 0.67,
+      "dia2": 0.8,
+      "redacao": 0.67
+    },
+    "classificação": 3,
+    "chamada": 13,
+    "ano": 2020
+}

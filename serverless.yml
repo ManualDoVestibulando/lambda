@@ -1,0 +1,23 @@
+service: lambda
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+functions:
+  form:
+    handler: form.handler
+    events:
+      - httpApi:
+          path: /form
+          method: post
+    environment:
+      GITHUB_TOKEN: ${env:GITHUB_TOKEN}
+      SECRET: ${env:SECRET, 4}
