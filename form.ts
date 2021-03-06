@@ -30,8 +30,8 @@ export const handler = async (
   delete nota.nusp;
 
   const md5Hasher = createHmac("md5", secret.toString());
-  let filename = md5Hasher.update(nusp.toString()).digest("hex");
-  let filepath = generatePath(nota) + "/" + filename + ".json";
+  let hash = md5Hasher.update(nusp.toString()).digest("hex");
+  let filepath = generatePath(nota) + "/" + hash + "/data.json";
   let filecontent = generateNotaJson(nota);
 
   let uploadedFile;

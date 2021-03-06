@@ -15,3 +15,4 @@ em mais importante o GITHUB_TOKEN deve ser gerano (aqui)[https://github.com/sett
 
     - [] Add Core by npm
     - [] Add hCaptha
+    - [] hash ip in nota
