@@ -7,8 +7,8 @@ import {
   generatePath,
   NotaFuvest,
   notaFuvestValidate as notaFuvestValidate,
-} from "./core/entity/NotaFuvest";
-import { createHmac } from "crypto";
+} from "core/entity/NotaFuvest";
+import { v4 as uuidv4 } from "uuid";
 
 const secret = process.env["SECRET"] ?? 4;
 const githubToken = process.env["GITHUB_TOKEN"];
@@ -26,12 +26,8 @@ export const handler = async (
       body: error.message,
     };
   }
-  const nusp = nota.nusp ?? Math.random();
-  delete nota.nusp;
 
-  const md5Hasher = createHmac("md5", secret.toString());
-  let hash = md5Hasher.update(nusp.toString()).digest("hex");
-  let filepath = generatePath(nota) + "/" + hash + "/data.json";
+  let filepath = generatePath(nota) + "/" + uuidv4() + "/data.json";
   let filecontent = generateNotaJson(nota);
 
   let uploadedFile;
