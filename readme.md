@@ -5,7 +5,7 @@ Função Lambda usada para submeter formularios salvos no (/data)[https://github
 # Variaveis de ambiente
 
 As variavies de ambiente necessarias podem ser encontradas no (.env.sample)[.env.sample],
-em mais importante o GITHUB_TOKEN deve ser gerano (aqui)[https://github.com/settings/tokens]
+em mais importante o GITHUB_TOKEN deve ser gerado (aqui)[https://github.com/settings/tokens]
 
 # Deploy
 
